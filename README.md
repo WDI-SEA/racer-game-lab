@@ -79,6 +79,7 @@ document.addEventListener("keydown", function(event) {
 redPosition += 5;
 document.getElementById('#red-square').style.left = redPosition + "px";
 ```
+- Use a background image instead of just background-color for your players.
 - Run with it from there!
 - If you are stuck on a problem, use pseudocode to break it down into smaller, more solvable problems.
 - If you need some ideas on where to start, watch this [video](https://www.youtube.com/watch?v=QVSwX98kKFs).
