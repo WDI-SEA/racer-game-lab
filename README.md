@@ -20,9 +20,9 @@ You will work individually on this assignment, but we will guide you as you get 
 #### Requirements
 
 - You should use separation of logic. In other words, include separate HTML, CSS, and JavaScript files.
-- Choose an existing landing page on the web; screenshot the landing page, and replicate its markup to create a separate landing page that links to your actual game.
+- Your game should not start right away- have a "Start" menu. Find a nice image for your "Start" menu. When you click "Start", the start menu should disappear, and the game should begin.
 
-  For example, in this landing page, when you click on the "Explore" button, you would be redirected to the game:
+  For example, in this landing page, when you click on the "Explore" button, the start menu would become hidden:
 
 ![](assets/landing.jpg)
 
@@ -39,43 +39,9 @@ Here is a more complicated example:
 - Style your landing page and game page with class-based CSS. For example:
 
 ```css
-.btn-success {
+.btn-start {
   background: #18BC9C;
   border-color: #18BC9C;
-}
-
-```
-
-- Include a media query for a tablet to make your pages responsive.
-
-  For example:
-
-```css
-@media (min-width: 768px) {
-  header .container {
-    padding-top: 200px;
-    padding-bottom: 100px;
-  }
-  header .intro-text .name {
-    font-size: 4.75em;
-  }
-  header .intro-text .skills {
-    font-size: 1.75em;
-  }
-}
-
-```
-
-- Use flexbox to build a grid system. For example:
-
-
-```css
-.Grid {
-  display: flex;
-}
-
-.Grid-cell {
-  flex: 1;
 }
 
 ```
@@ -83,12 +49,10 @@ Here is a more complicated example:
 - Comment your code appropriately. For example:
 
 ```js
-//this detects how much distance the user has scrolled from the top
+// this moves the red square
+redPosition += 10;
 
 ```
-
-- Adhere to the [AirBnB style guide](https://github.com/airbnb/javascript) for writing your JavaScript
-- Adhere to the [Google style guide](https://google.github.io/styleguide/htmlcssguide.xml) for writing your HTML/CSS
 
 #### Starter code
 
@@ -134,7 +98,7 @@ document.getElementById('#red-square').style.left = redPosition + "px";
 
 #### Deliverable
 
-You should turn in your HTML, CSS, and JavaScript files to a GitHub repository (fork or separate repo). In your readme file, include a screenshot of the webpage you've used to build your landing page.
+You should turn in your HTML, CSS, and JavaScript files to a GitHub repository (fork).
 
 Here's a screenshot of what your game page could look like:
 
