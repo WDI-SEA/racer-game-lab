@@ -90,29 +90,47 @@ Here is a more complicated example:
 - Adhere to the [AirBnB style guide](https://github.com/airbnb/javascript) for writing your JavaScript
 - Adhere to the [Google style guide](https://google.github.io/styleguide/htmlcssguide.xml) for writing your HTML/CSS
 
-**Bonus:**
-
-- Use images to create a background and/or players.
-- Score each game based on the time it took to complete, and by how much time the player beat the opposition.
-- Display the time it took for the player to complete the race.
-- Make a 'Best of 3' tournament and display the winner of the tournament.
-- Keep track of best times/high scores across page refreshes using `localStorage`.
-- Add animations.
-- Have players do something other than simply pressing a key to move their player; for example, make them type words, or solve simple math problems.
-- Upon the click of a button, allow your players to turn a sound on or off.
-
 #### Starter code
 
 There is no starter code for this project other than blank HTML, CSS, and JS files located in the code folder of this repo. Here are some tips on how to get started:
 
 - Start simple! Ask yourself what the MVP of this project is.
 - Create HTML and CSS files that create one red square div and one blue, lined up on the left side of the screen.
-- Add a keydown event listener that console logs "blue move" or "red move."
+```
+Your squares should have this CSS style rule- position: 'relative'.
+Use the "top" / "left" CSS properties to position the squares.
+```
+- In your JS, create some variables to keep track of the position of your two squares
+```
+var redPosition = 0;
+var bluePosition = 0;
+```
+- Add a keyup event listener that console logs "blue move" or "red move."
+```
+document.addEventListener("keydown", function(event) {
+    console.log("keydown: " + event.keyCode);
+});
+```
 - Replace that console log with JavaScript that moves the red or blue div a little to the right.
-- A helpful jQuery method to look into: [offset()](http://api.jquery.com/offset/).
+```
+redPosition += 5;
+document.getElementById('#red-square').style.left = redPosition + "px";
+```
 - Run with it from there!
 - If you are stuck on a problem, use pseudocode to break it down into smaller, more solvable problems.
 - If you need some ideas on where to start, watch this [video](https://www.youtube.com/watch?v=QVSwX98kKFs).
+
+**Bonus:**
+
+- Use images to create a background and/or players.
+- Display the time it took for the player to complete the race. See [Date.now()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/now)
+- Score each game based on the time it took to complete, and by how much time the player beat the opposition.
+- Make a 'Best of 3' tournament and display the winner of the tournament.
+- Keep track of best times/high scores across page refreshes using `[localStorage](http://stackoverflow.com/a/28615560)`.
+- Add animations.
+- Have players do something other than simply pressing a key to move their player; for example, make them type words, or solve simple math problems.
+- Upon the click of a button, allow your players to turn a sound on or off.
+
 
 #### Deliverable
 
