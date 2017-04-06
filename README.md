@@ -56,13 +56,12 @@ redPosition += 10;
 
 #### Starter code
 
-There is no starter code for this project other than blank HTML, CSS, and JS files located in the code folder of this repo. Here are some tips on how to get started:
+Use the start code folder. Here are some tips on how to get started:
 
 - Start simple! Ask yourself what the MVP of this project is.
-- Create HTML and CSS files that create one red square div and one blue, lined up on the left side of the screen.
+- Create CSS styles that create one red square div and one blue, lined up on the left side of the screen.
 ```
-Your squares should have this CSS style rule- position: 'relative'.
-Use the "top" / "left" CSS properties to position the squares.
+background-color: red;
 ```
 - In your JS, create some variables to keep track of the position of your two squares
 ```
@@ -86,6 +85,7 @@ document.getElementById('#red-square').style.left = redPosition + "px";
 
 **Bonus:**
 
+- Can you create all the `<div class="box"></div>` elements in JS instead of HTML?
 - Use images to create a background and/or players.
 - Display the time it took for the player to complete the race. See [Date.now()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/now)
 - Score each game based on the time it took to complete, and by how much time the player beat the opposition.

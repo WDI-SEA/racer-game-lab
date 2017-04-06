@@ -1,0 +1,13 @@
+.flex-container {
+    display: flex;
+}
+
+.box {
+    border: 1px solid black;
+    width: 100%;
+    height: 100px;
+}
+
+.redBox {
+    background-color: red;
+}
