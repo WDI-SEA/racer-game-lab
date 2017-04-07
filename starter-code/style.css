@@ -16,8 +16,8 @@
 
 .red-track .box {
     background-color: lightpink;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
+    background-image: url("images/racetrack.png");
+    background-size: cover;
 }
 
 #blueBox {
@@ -29,7 +29,8 @@
 
 .blue-track .box {
     background-color: lightblue;
-    border-bottom: 1px solid black;
+    background-image: url("images/racetrack.png");
+    background-size: cover;
 }
 
 #start-menu {
@@ -73,5 +74,5 @@ button {
 #game {
     background-image: url("images/racing-game-bg.jpg");
     background-size: cover;
-    height: 940px;
+    height: 1080px;
 }

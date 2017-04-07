@@ -5,7 +5,6 @@ var blueBoxPosition = 0;
 var numberOfBoxes = 17;
 
 function onPageLoaded() {
-    console.log("go!");
 
     var startButton = document.getElementById("start-button");
 
@@ -43,6 +42,8 @@ function onKeyUp(event) {
 
         if (redBoxPosition == redTrackBoxes.length - 1) {
             alert("Racer X wins!!");
+
+            ///would be neat if the alert was just a dailogue box in the game
             window.location.reload();
 
         } else {
