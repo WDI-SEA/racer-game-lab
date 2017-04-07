@@ -14,13 +14,13 @@ function onLoad() {
     var audioKOTH = document.getElementById("king-of-the-hill");
 
     function playAudioGameStart() {
-        audioKOTH.currentTime += 1000;
+        audioKOTH.currentTime = 1000;
         audioKOTH.play();
     }
 
     function playAudioGameOver() {
         audioKOTH.pause();
-        audioBeercan.curentTime += 650;
+        audioBeercan.currentTime = 1200;
         audioBeercan.play();
         setTimeout(function() { audioManBurp.play() }, 2000);
         document.getElementById("instructions").classList.add("hidden");
@@ -34,6 +34,18 @@ function onLoad() {
         message.querySelector("h1").classList.add("party");
     }
 
+    function randomizeMotion(currentPosition) {
+        var randomNum = Math.random();
+        var positionMovement;
+        if (currentPosition >= 0) {
+            if (randomNum > 0.25) {
+                positionMovement = 1;
+            } else {
+                positionMovement = -1;
+            }
+        }
+        return positionMovement;
+    }
 
     message.addEventListener("click", function() {
         // removes start menu and begins game
@@ -44,7 +56,7 @@ function onLoad() {
         var gameWon = false;
         var timeStarted = Date.now(); //set to Date.Now() now, will subtract from Date.Now() after to obtain time to finish
         document.addEventListener("keyup", function(e) {
-
+            // !!!!!!!!! ADD MATH.RANDOM TO MOVEMENT (ASSIGN POSITION MOVEMENT TO WHAT IS GENERATED)
 
             // if game has been won, nothing happens with key presses
             if (gameWon === false) {
@@ -54,7 +66,7 @@ function onLoad() {
                     // the next div in line gets the right color(character) class added
                     // "a" is assigned to redBox AKA Boomhauer
                     redGameDivs[redPosition].classList.remove("redBox");
-                    redPosition += 1;
+                    redPosition += randomizeMotion(redPosition);
                     redGameDivs[redPosition].classList.add("redBox");
                     if (redPosition === redGameDivs.length - 1) {
                         gameWon = true;
@@ -63,7 +75,7 @@ function onLoad() {
                 } else if (e.key === "l") {
                     // "l" is assigned to blueBox AKA Bill
                     blueGameDivs[bluePosition].classList.remove("blueBox");
-                    bluePosition += 1;
+                    bluePosition += randomizeMotion(bluePosition);
                     blueGameDivs[bluePosition].classList.add("blueBox");
                     if (bluePosition === blueGameDivs.length - 1) {
                         gameWon = true;
