@@ -8,6 +8,33 @@
     height: 100px;
 }
 
-.redBox {
+#redBox {
     background-color: red;
+}
+
+#blueBox {
+    background-color: blue;
+}
+
+#start-menu {
+    background-image: url(images/Magical_Unicorns.jpg);
+    background-size: cover;
+    height: 600px;
+}
+
+#start-button {
+    display: block;
+    margin: 0 auto;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.red-track .box {
+    background-color: pink;
+}
+
+.blue-track .box {
+    background-color: teal;
 }
