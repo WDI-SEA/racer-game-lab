@@ -3,11 +3,75 @@
 }
 
 .box {
-    border: 1px solid black;
     width: 100%;
     height: 100px;
 }
 
-.redBox {
+#redBox {
     background-color: red;
+    background-image: url("images/racer-x-red.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.red-track .box {
+    background-color: lightpink;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+#blueBox {
+    background-color: blue;
+    background-image: url("images/blue-speed-racer.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.blue-track .box {
+    background-color: lightblue;
+    border-bottom: 1px solid black;
+}
+
+#start-menu {
+    background-image: url("images/start-menu-img.jpg");
+    background-size: cover;
+    height: 940px;
+}
+
+.hidden {
+    display: none;
+}
+
+button {
+    display: flex;
+}
+
+#start-button {
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: 0 auto;
+    color: white;
+    font-size: 30px;
+    padding: 50px;
+    background-color: rgba(184, 184, 184, .5);
+    border: 10px solid white;
+    border-radius: 50%;
+}
+
+
+/*need to figure out why it won't re-align button to be on the dead center of the start page --- something with the way it's nested but it doesn't make sense atm*/
+
+
+/*button:hover {
+    background-color: darkgrey;
+}*/
+
+
+/*hover doesn't work as intended even w/ #start-button:hover {} for some reason -- come back to*/
+
+#game {
+    background-image: url("images/racing-game-bg.jpg");
+    background-size: cover;
+    height: 940px;
 }
