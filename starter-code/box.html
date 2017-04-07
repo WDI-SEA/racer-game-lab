@@ -1,0 +1,119 @@
+<html>
+
+<head>
+    <title>moving box - stops/starts on left click</title>
+    <style type='text/css'>
+    #game_region {
+        width: 600px;
+        height: 400px;
+        background-color: black;
+        position: relative;
+    }
+    
+    #box {
+        width: 48px;
+        height: 48px;
+        background-color: white;
+        position: absolute;
+        left: 280px;
+        top: 180px;
+    }
+    </style>
+    <script type='text/javascript'>
+    var box;
+
+    // Maximum value for the box's X and Y coordinates.
+    var MAX_BOX_X = 600 - 48;
+    var MAX_BOX_Y = 400 - 48;
+
+    var leftclick;
+    var skey;
+
+    var SPEED = 5;
+
+    // Configures the init() function to be called after the document is loaded.
+    window.onload = init;
+
+    function init() {
+        box = document.getElementById("box");
+
+        document.onmousedown = buttonclick;
+        document.onkeydown = keyDown;
+        box.posX = box.offsetLeft;
+        box.posY = box.offsetTop;
+        box.velX = SPEED;
+        box.velY = SPEED;
+        box.move = true;
+        setInterval(gameLoop, 33);
+    }
+
+    function keyDown(e) {
+        if (!e) {
+            e = window.event;
+        }
+        if (e.keyCode == 83) {
+            skey = true;
+        }
+    }
+
+    function buttonclick(e) {
+        if ((e.which && e.which != 2) || (e.button && e.button != 2)) {
+            leftclick = true;
+        }
+    }
+
+    function gameLoop() {
+        handleInput()
+        moveBox()
+    }
+
+    // this loops of the keys. if left button was clicked or skey as pressed it will change box.move and the set the key/click to false
+    function handleInput() {
+        if (skey || leftclick) {
+            if (box.move == true) {
+                box.move = false;
+            } else {
+                box.move = true;
+            }
+            skey = false;
+            leftclick = false;
+        }
+    }
+
+    function moveBox() {
+        // will only change position if box.move is true
+        if (box.move) {
+            box.posX += box.velX;
+            box.posY += box.velY;
+
+            if (box.posX <= 0) {
+                box.posX = 0;
+                box.velX = -box.velX;
+            }
+            if (box.posX >= MAX_BOX_X) {
+                box.posX = MAX_BOX_X;
+                box.velX = -box.velX;
+            }
+            if (box.posY <= 0) {
+                box.posY = 0;
+                box.velY = -box.velY;
+            }
+            if (box.posY >= MAX_BOX_Y) {
+                box.posY = MAX_BOX_Y;
+                box.velY = -box.velY;
+            }
+            // Update the left and top CSS properties.
+            box.style.left = box.posX + "px";
+            box.style.top = box.posY + "px";
+        }
+    }
+    </script>
+</head>
+
+<body>
+    <div id='game_region'>
+        <div id='box'></div>
+    </div>
+</body>
+
+</html>
