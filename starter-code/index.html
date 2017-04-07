@@ -6,52 +6,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Your Game</title>
     <link rel="stylesheet" href="style.css">
-    <script src="app.js"></script>
+    <script src="main.js"></script>
 </head>
 
 <body>
-    <div id="start-menu">
-    </div>
-    <div id="game">
-        <div class="flex-container">
-            <div class="box redBox"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
+    <audio>
+        <source src="sounds/beercan.wav" type="audio/wav">
+        <source src="sounds/manburp.mp3" type="audio/mp3">
+    </audio>
+    <main>
+        <div id="message">
+            <h1>Start Game!</h1>
         </div>
-        <div class="flex-container">
-            <div class="box blueBox"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
+        <div id="game" class="hidden">
+            <div class="flex-container">
+                <div class="box redBox"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+            </div>
+            <div class="flex-container">
+                <div class="box blueBox"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+            </div>
+            <img class="goal" src="images/alamo.png" alt="texas alamo beer">
         </div>
-    </div>
+    </main>
 </body>
 
 </html>
