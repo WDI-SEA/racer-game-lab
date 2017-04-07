@@ -21,11 +21,13 @@ body {
 #redBox {
     /*background-color: red;*/
     background-image: url("images/frank.png");
+    background-size: cover;
 }
 
 #blueBox {
     /*background-color: #5EE5FF;*/
     background-image: url("images/blue2.png");
+    background-size: cover;
 }
 
 #start-menu {
