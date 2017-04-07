@@ -11,10 +11,12 @@
 
 <body>
     <div id="start-menu">
+        <button id="start-button">Start</button>
     </div>
-    <div id="game">
-        <div class="flex-container">
-            <div class="box redBox"></div>
+    <div id="game" class="hidden">
+        <!-- represents each player in the game -->
+        <div class="flex-container red-track">
+            <div id="redBox" class="box"></div>
             <div class="box"></div>
             <div class="box"></div>
             <div class="box"></div>
@@ -32,8 +34,9 @@
             <div class="box"></div>
             <div class="box"></div>
         </div>
-        <div class="flex-container">
-            <div class="box blueBox"></div>
+        <!-- This represents the second player in the game -->
+        <div class="flex-container blue-track">
+            <div id="blueBox" class="box"></div>
             <div class="box"></div>
             <div class="box"></div>
             <div class="box"></div>

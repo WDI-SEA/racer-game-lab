@@ -2,12 +2,61 @@
     display: flex;
 }
 
+body {
+    background-image: url(images/clouds.jpg);
+    background-size: cover;
+    height: 825px;
+}
+
 .box {
-    border: 1px solid black;
+    border: 1px solid transparent;
     width: 100%;
     height: 100px;
 }
 
-.redBox {
-    background-color: red;
+#redBox {
+    background-image: url(images/purple_pony.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#blueBox {
+    background-image: url(images/pink_pony.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#start-menu {
+    background-image: url(images/Magical_Unicorns.jpg);
+    background-size: cover;
+    height: 825px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#start-button {
+    font: helvetica, sans-serif;
+    font-size: 25px;
+    background-color: purple;
+    display: block;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: 2px solid pink;
+    margin: 0 auto;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.red-track .box {
+    background-image: url(images/rainbow.jpg);
+    background-size: cover;
+}
+
+.blue-track .box {
+    background-image: url(images/rainbow.jpg);
+    background-size: cover;
 }
