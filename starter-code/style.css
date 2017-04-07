@@ -8,6 +8,34 @@
     height: 100px;
 }
 
-.redBox {
+#redBox {
     background-color: red;
 }
+
+#blueBox {
+    background-color: blue;
+}
+
+#start-menu {
+    background-image: url("images/ocean.jpeg");
+    background-size: cover;
+    height: 850px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+.hide {
+    display: none;
+}
+
+button {
+    position: absolute;
+}
+
+
+/*
+1. Find an image online to use as the background image of your landing page/start-menu div
+2. Creat "Start" button.  Hide game by default.  Show game and hide start ment when button is clicked
+
+*/
