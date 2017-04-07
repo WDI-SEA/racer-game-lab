@@ -8,13 +8,18 @@ body {
 #message {
     width: 100%;
     background-color: white;
-    height: 3em;
+    padding: 10px;
+    /*height: 3em;*/
+}
+
+h1,
+p {
+    color: red;
+    text-align: center;
 }
 
 h1 {
     font-size: 2em;
-    color: red;
-    text-align: center;
 }
 
 .party {
@@ -50,7 +55,7 @@ h1 {
 
 .box {
     /*toggling border is useful for troubleshooting*/
-    border: 1px solid white;
+    /*border: 1px solid white;*/
     width: 100%;
     height: 200px;
 }

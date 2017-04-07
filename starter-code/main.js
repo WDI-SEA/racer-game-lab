@@ -11,11 +11,19 @@ function onLoad() {
     var bluePosition = 0; // likewise for blueGameDivs
     var audioBeercan = document.getElementById("beercan");
     var audioManBurp = document.getElementById("manburp");
+    var audioKOTH = document.getElementById("king-of-the-hill");
+
+    function playAudioGameStart() {
+        audioKOTH.currentTime += 1000;
+        audioKOTH.play();
+    }
 
     function playAudioGameOver() {
+        audioKOTH.pause();
         audioBeercan.curentTime += 650;
         audioBeercan.play();
         setTimeout(function() { audioManBurp.play() }, 2000);
+        document.getElementById("instructions").classList.add("hidden");
     }
 
     function gameOver(player, time, timeStarted) {
@@ -31,9 +39,10 @@ function onLoad() {
         // removes start menu and begins game
         message.classList.add("hidden");
         gameArea.classList.remove("hidden");
+
+        playAudioGameStart();
         var gameWon = false;
         var timeStarted = Date.now(); //set to Date.Now() now, will subtract from Date.Now() after to obtain time to finish
-        console.log(timeStarted);
         document.addEventListener("keyup", function(e) {
 
 
