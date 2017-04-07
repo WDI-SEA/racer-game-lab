@@ -75,6 +75,8 @@ function resetBoard() {
     bluePosition = 1;
     document.getElementById('start-button').innerHTML = "Start Game";
     document.getElementById('alert').style.display = "none";
+    document.getElementById("alert").innerHTML = 'RED WINS';
+    document.getElementById("alert").style.backgroundColor = 'red';
 }
 
 function startGame() {
