@@ -3,11 +3,65 @@
 }
 
 .box {
-    border: 1px solid black;
+    /*    border: 1px solid black;*/
     width: 100%;
     height: 100px;
+    margin-top: 2em;
 }
 
-.redBox {
-    background-color: red;
+#redBox {
+    /*background-color: red;*/
+    background-image: url("images/frank.png");
+}
+
+#blueBox {
+    /*background-color: #5EE5FF;*/
+    background-image: url("images/blue2.png");
+}
+
+#start-menu {
+    background-image: url("images/OSBackground.jpg");
+    background-size: cover;
+    height: 50em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#start-button {
+    display: block;
+    color: #D00563;
+    font-size: 800;
+    background-color: #C3FF0D;
+    /*    margin: 0 auto;*/
+    padding: 3em;
+    font-size: 1.5em;
+    box-shadow: none;
+    border-style: none;
+}
+
+#start-button:hover {
+    background-color: #FF8201;
+    text-transform: uppercase;
+}
+
+.red-track .box {
+    /*background-color: pink;*/
+    margin-top: 5em;
+}
+
+.blue-track .box {
+    /*background-color: teal;
+*/
+}
+
+.hidden {
+    display: none !important;
+}
+
+#goBlue {
+    display: block;
+    margin: -18em auto 0;
+    align-items: center;
+    transition-delay: 1s;
 }
