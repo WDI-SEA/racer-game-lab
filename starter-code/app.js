@@ -47,7 +47,7 @@ function onKeyUp() {
 
         redPath[redBoxPosition].id = 'redBox';
         if (redBoxPosition == redPath.length - 1) {
-            console.log("Red wins!");
+            console.log('Red Wins!');
         }
     } else if (event.key == 'l' && blueBoxPosition < numberOfBoxes - 1) {
         var currentBlueBoxDiv = document.getElementById('blueBox');
@@ -59,7 +59,7 @@ function onKeyUp() {
 
         bluePath[blueBoxPosition].id = 'blueBox';
         if (blueBoxPosition == bluePath.length - 1) {
-            console.log("Blue wins!");
+            console.log('Blue Wins!');
         }
     }
 }
