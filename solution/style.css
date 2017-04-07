@@ -1,0 +1,71 @@
+body {
+    background-image: url("images/river.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    magin: 0 auto;
+}
+
+#start-menu {
+    background-image: url("images/Jungle-Book-Cover.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 800px;
+}
+
+.hidden {
+    display: none;
+}
+
+.flex-container {
+    display: flex;
+    align-content: flex-end;
+}
+
+.box {
+    border: none;
+    width: 100%;
+    height: 100px;
+}
+
+#red-box {
+    background-image: url("images/mowglii.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    /*background-color: red;*/
+}
+
+#blue-box {
+    background-image: url("images/baloo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    /*    background-color: blue;
+*/
+}
+
+#start-button {
+    display: block;
+    margin: 0 auto;
+}
+
+#winner {
+    font-size: 8em;
+}
+
+#red-wins {}
+
+#blue-wins {}
+
+#game {
+    margin-top: 25em;
+}
+
+.red-track .box {
+    /*    background-color: pink;*/
+}
+
+.blue-track .box {
+    /*    background-color: teal;
+*/
+}
