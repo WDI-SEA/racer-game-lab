@@ -2,12 +2,142 @@
     display: flex;
 }
 
-.box {
-    border: 1px solid black;
+#start-menu {
+    display: flex;
+    background-image: url('images/sprint-start.jpg');
+    background-size: cover;
+    background-position: relative;
     width: 100%;
-    height: 100px;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.redBox {
-    background-color: red;
+#startButton {
+    background-image: url('images/race-track.png');
+    background-size: cover;
+    border-style: none;
+    border-radius: 50%;
+    background-color: rgba(25, 30, 30, .5);
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: 2px;
+    height: 250px;
+    width: 250px;
+    display: block;
+    margin: 0 auto;
+    /*align-self: center;*/
+}
+
+#startButton:hover {
+    transition-duration: 2s;
+    background-color: white;
+    font-size: 30px;
+    color: #FFC03A;
+    border: 8px solid #FFC03A;
+}
+
+a {
+    text-decoration: none;
+    color: #FFC03A;
+    font-family: 'Audiowide', sans-serif;
+}
+
+.startLink:hover {
+    color: black;
+    transition-duration: 2s;
+}
+
+.directions {
+    font-size: 20px;
+    color: black;
+    text-align: center;
+    top: 0;
+}
+
+h1 {
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: 'Audiowide', sans-serif;
+    color: #FFC03A;
+    margin-top: 10px;
+}
+
+.directions p {
+    padding-left: 200px;
+    padding-right: 200px;
+}
+
+.browser {
+    font-style: italic;
+    font-size: 15px;
+}
+
+.box {
+    /*border: 1px solid #FFF;*/
+    width: 100%;
+    height: 70px;
+}
+
+.red-track {
+    /*background-color: #F9E4DF;*/
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    border-top: 5px solid black;
+    border-bottom: 4px dashed #FFC03A;
+}
+
+.blue-track {
+    /*background-color: #E0EDF1;*/
+    padding-left: 10px;
+    margin-top: 10px;
+    padding-bottom: 20px;
+    border-bottom: 5px solid black;
+}
+
+#redBox {
+    /*    background-color: #D33946;*/
+    background-image: url("images/player-1.png");
+    background-size: cover;
+}
+
+#blueBox {
+    /*background-color: #12647C;*/
+    background-image: url("images/player-2.png");
+    background-size: cover;
+}
+
+#start {
+    float: left;
+    text-transform: uppercase;
+    font-family: 'Audiowide', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    margin-left: 20px;
+}
+
+.startingLine {
+    height: 80px;
+    margin-top: 30px;
+}
+
+#winner {
+    text-transform: uppercase;
+    float: right;
+    font-family: 'Audiowide', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    margin-right: 20px;
+}
+
+.winnersTrophy {
+    height: 70px;
+    margin-top: 30px;
+}
+
+.hidden {
+    display: none !important;
 }

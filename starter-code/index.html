@@ -4,17 +4,26 @@
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Your Game</title>
+    <title>100m Sprint</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
     <script src="app.js"></script>
 </head>
 
 <body>
     <div id="start-menu">
+        <button type="button" id="startButton">
+            <a href="#game" class="startLink">Start</a>
+        </button>
     </div>
-    <div id="game">
-        <div class="flex-container">
-            <div class="box redBox"></div>
+    <div id="game" class="hidden">
+        <div class="directions">
+            <h1>How To Play</h1>
+            <p>Requires 2 players. Player 1 is assigned the pink runner. To move the pink runner towards the finish line, hit the 'a' key repeatedly. Player 2 is assigned the green runner. To move the green runner towards the finish line, press the 'l' key repeatedly. The first runner to the finish line.</p>
+            <p class="browser">Please note: This game is best viewed with your browser at 1250px wide.</p>
+        </div>
+        <div class="flex-container red-track">
+            <div id="redBox" class="box"></div>
             <div class="box"></div>
             <div class="box"></div>
             <div class="box"></div>
@@ -32,8 +41,8 @@
             <div class="box"></div>
             <div class="box"></div>
         </div>
-        <div class="flex-container">
-            <div class="box blueBox"></div>
+        <div class="flex-container blue-track">
+            <div id="blueBox" class="box"></div>
             <div class="box"></div>
             <div class="box"></div>
             <div class="box"></div>
@@ -50,6 +59,14 @@
             <div class="box"></div>
             <div class="box"></div>
             <div class="box"></div>
+        </div>
+        <div id="start">
+            <img src="images/chronometer.png" alt="chronometer" class="startingLine">
+            <p>Start</p>
+        </div>
+        <div id="winner">
+            <img src="images/trophy.png" alt="trophy" class="winnersTrophy">
+            <p>Finish</p>
         </div>
     </div>
 </body>
