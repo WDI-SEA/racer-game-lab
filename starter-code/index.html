@@ -4,17 +4,19 @@
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Your Game</title>
+    <title>Game of the Century</title>
     <link rel="stylesheet" href="style.css">
     <script src="app.js"></script>
 </head>
 
 <body>
     <div id="start-menu">
+        <button id="start-button" class="button">Start!</button>
     </div>
-    <div id="game">
-        <div class="flex-container">
-            <div class="box redBox"></div>
+    <div id="game" class="hidden">
+        <!-- player1 -->
+        <div class="flex-container red-track">
+            <div class="box" id="redBox"></div>
             <div class="box"></div>
             <div class="box"></div>
             <div class="box"></div>
@@ -32,8 +34,9 @@
             <div class="box"></div>
             <div class="box"></div>
         </div>
-        <div class="flex-container">
-            <div class="box blueBox"></div>
+        <!-- player2 -->
+        <div class="flex-container blue-track">
+            <div class="box" id="blueBox"></div>
             <div class="box"></div>
             <div class="box"></div>
             <div class="box"></div>
