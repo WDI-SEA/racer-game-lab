@@ -22,7 +22,9 @@ function onLoad() {
         audioKOTH.pause();
         audioBeercan.currentTime = 1200;
         audioBeercan.play();
-        setTimeout(function() { audioManBurp.play() }, 2000);
+        setTimeout(function() {
+            audioManBurp.play();
+        }, 2000);
         document.getElementById("instructions").classList.add("hidden");
     }
 
@@ -36,15 +38,16 @@ function onLoad() {
 
     function randomizeMotion(currentPosition) {
         var randomNum = Math.random();
-        var positionMovement;
-        if (currentPosition >= 0) {
-            if (randomNum > 0.25) {
-                positionMovement = 1;
-            } else {
-                positionMovement = -1;
-            }
+        var positionMovement = 0;
+        console.log(randomNum, positionMovement);
+        if (randomNum > 0.25) {
+            positionMovement = 1;
+        } else if (randomNum <= 0.25 && currentPosition > 1) {
+            positionMovement = -1;
         }
+        console.log(randomNum, positionMovement);
         return positionMovement;
+
     }
 
     message.addEventListener("click", function() {
