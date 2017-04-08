@@ -1,13 +1,88 @@
+body {
+    background-image: url("images/fence.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+#message {
+    background-color: white;
+    padding: 10px;
+    margin: 10px;
+}
+
+h1,
+p {
+    color: red;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+.party {
+    animation: partyTime 3s infinite ease;
+}
+
+@keyframes partyTime {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    25% {
+        font-size: 1.5em;
+    }
+    50% {
+        font-size: 2em
+    }
+    75% {
+        font-size: 1.5em;
+    }
+    100% {
+        filter: hue-rotate(360deg);
+        font-size: 2em;
+    }
+}
+
+#game {
+    margin-top: 260px;
+}
+
 .flex-container {
     display: flex;
 }
 
 .box {
-    border: 1px solid black;
+    /*toggling border is useful for troubleshooting*/
+    /*border: 1px solid white;*/
     width: 100%;
-    height: 100px;
+    height: 200px;
+}
+
+.redBox,
+.blueBox {
+    background-min-width: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
 }
 
 .redBox {
-    background-color: red;
+    background-image: url("images/boomhauer.png");
+}
+
+.blueBox {
+    background-image: url("images/bill.png");
+}
+
+.hidden {
+    display: none;
+}
+
+.goal {
+    position: absolute;
+    left: 92%;
+    bottom: 20%;
+    z-index: -1;
 }
